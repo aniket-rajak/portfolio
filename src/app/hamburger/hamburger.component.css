@@ -1,0 +1,65 @@
+.ham-section{
+    width: 94%;
+    display: none;
+  }
+
+.mat-drawer{
+    background-color: #191414; 
+    color: red; 
+    height: 150px; 
+    width: 100%;
+}
+
+
+  .btn-section{
+    min-width: 100%;
+    height: 100%;
+    text-align: end;
+    color: white;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  .btn-section::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .btn-section {
+    -ms-overflow-style: none !important; 
+    scrollbar-width: none !important; 
+  }
+
+  .btn{
+    color: #fff !important;
+  }
+  .btn:hover{
+    color: red !important;
+  }
+  .btn-close{
+    color: #fff !important;
+    margin: auto;
+  }
+  .btn-close:hover{
+    color: red !important;
+  }
+  .ham-btn{
+    color: #fff;
+    display: none;
+    display: flex;
+    margin-top: 50px;
+  }
+  .ham-btn:hover{
+    color: red;
+  }
+
+  @media (max-width: 700px) {
+    .ham-section{
+        display: block;
+    }
+    .ham-btn{
+        display: block;
+        float: right;
+    }
+  }

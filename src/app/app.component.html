@@ -1,0 +1,34 @@
+  <!-- <app-header></app-header> -->
+  
+  <mat-toolbar class="header-section">
+    <div class="logo">
+        <img src="./../assets/image/angular-logo.png" alt="logo" class="logo-image" >
+    </div>
+    <app-hamburger class="app-hamburger"></app-hamburger>
+    <div class="btn-section">
+        <button mat-button routerLink="/home" class="btn" style="color: red;">Home</button>
+        <button mat-button routerLink="about" class="btn">About</button>
+        <button mat-button routerLink="/contact" class="btn" >Contact</button>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu"  class="btn">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+          <mat-menu #menu="matMenu">
+            <div style="background-color: #191414; height: 200px;">
+              <button mat-menu-item routerLink="skills" class="btn">Skills</button>
+              <button mat-menu-item routerLink="certificate" class="btn">Certificate</button>
+              <button mat-menu-item routerLink="projects" class="btn">Projects</button>
+            </div>
+          </mat-menu>   
+         
+    </div>
+    
+     
+  </mat-toolbar>
+
+
+<div [@routeAnimations]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
+
+<!-- <app-preloader *ngIf="isLoading"></app-preloader> -->
+

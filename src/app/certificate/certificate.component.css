@@ -1,0 +1,87 @@
+.mat-stepper-horizontal {
+    margin-top: 8px;
+    
+  }
+  
+  .mat-mdc-form-field {
+    margin-top: 16px;
+  }
+ 
+ 
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+   
+.certificate-section{
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 550px;
+    padding-bottom: 10px;
+}  
+
+.img{
+    height: 400px; 
+    width: 400px;
+    
+}
+
+.text1{
+    color: red;
+    padding-left: 20px;
+}
+
+@media (max-width : 1300px) {
+    .certificate-section{
+        padding-left: 400px;
+        
+    } 
+}
+
+@media (max-width : 1050px) {
+    .certificate-section{
+        padding-left: 250px;
+    } 
+}
+
+@media (max-width : 700px) {
+    .img{
+        height: 300px; 
+        width: 300px;
+    }
+    .certificate-section{
+        padding-left: 100px !important;
+        
+    } 
+}
+@media (max-width : 500px) {
+    .img{
+        height: 200px; 
+        width: 200px;
+        margin-left: -50px;
+    }
+    .text2{
+        margin-left: -50px;
+    }
+    button{
+        display: none;
+    }
+   
+}
+
+@media (max-width : 300px) {
+    .img{
+        height: 100%; 
+        width: 100%;
+        margin-left: -50px;
+    }
+    .text2{
+        margin-left: -50px;
+    }
+    button{
+        display: none;
+    }
+}
