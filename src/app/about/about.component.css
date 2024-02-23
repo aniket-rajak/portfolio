@@ -1,4 +1,12 @@
-info-section-two
+
+
+.body-Topsection-about{
+    height: 100vh; 
+    background-color: #191414; 
+    margin-top: 200px;
+    margin-top: 100px !important;
+}
+
 .body-section-about{
     width: 100% !important; 
     background-color: #191414; 
@@ -161,6 +169,12 @@ info-section-two
     }
     .ham-btn{
         display: block;
+    }
+    .body-Topsection-about{
+        margin-top: 200px !important;
+    }
+    .image-div{
+        padding-left: 0;
     }
 }
 

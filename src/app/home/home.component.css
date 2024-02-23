@@ -459,7 +459,7 @@ li{
     flex-direction: column; 
     padding-left: 0;
     padding-right: 0;
-    margin: 0;
+    padding-left: 200px;
   }
 
   .education-items-two{
@@ -531,6 +531,10 @@ li{
   }
   .left-side-text-one-text5{
     font-size: 18px; 
+  }
+
+  .education-section{
+    padding-left: 200px;
   }
 
   .education-item1{
@@ -688,6 +692,7 @@ li{
 
   .education-section{
     height: 10vh;
+    padding-left: 0;
    
   }
 
@@ -738,6 +743,9 @@ li{
     font-size: 20px;
     font-weight: 400;
   }
+  .education-section{
+    padding-left: 0;
+  }
   
 }
 
@@ -748,6 +756,9 @@ li{
   .moving-text li{
     font-size: 25px;
     font-weight: 400;
+  }
+  .education-section{
+    padding-left: 0;
   } 
   
 }
@@ -786,6 +797,9 @@ li{
   .responsive-image{
     height: 200px; 
     width: 200px;
+  }
+  .education-section{
+    padding-left: 0;
   }
   
 }
@@ -863,4 +877,7 @@ li{
     height: 300px; 
   }
   
+  .education-section{
+    padding-left: 0;
+  }
 }

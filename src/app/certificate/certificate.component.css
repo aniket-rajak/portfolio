@@ -1,3 +1,7 @@
+.body-Topcertificate-section{
+    margin-top: 100px;
+}
+
 .mat-stepper-horizontal {
     margin-top: 8px;
     
@@ -19,13 +23,13 @@
 .certificate-section{
     width: 100%;
     padding-top: 10px;
-    padding-left: 550px;
+    padding-left: 450px;
     padding-bottom: 10px;
 }  
 
 .img{
     height: 400px; 
-    width: 400px;
+    width: 600px;
     
 }
 
@@ -41,9 +45,9 @@
     } 
 }
 
-@media (max-width : 1050px) {
+@media (min-width :701px) and (max-width : 1050px) {
     .certificate-section{
-        padding-left: 250px;
+        padding-left: 160px;
     } 
 }
 
@@ -53,14 +57,16 @@
         width: 300px;
     }
     .certificate-section{
-        padding-left: 100px !important;
-        
+        padding-left: 130px !important;
     } 
+    .body-Topcertificate-section{
+        margin-top: 200px;
+    }
 }
 @media (max-width : 500px) {
     .img{
         height: 200px; 
-        width: 200px;
+        width: 300px;
         margin-left: -50px;
     }
     .text2{
@@ -70,6 +76,9 @@
         display: none;
     }
    
+    .certificate-section{
+        padding-left: 70px !important;
+    } 
 }
 
 @media (max-width : 300px) {

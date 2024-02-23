@@ -13,6 +13,12 @@
    font-size: 50px;
 } */
 
+.body-Topsection-contact{
+    height: 100vh; 
+    background-color: #191414; 
+    margin-top: 100px;
+}
+
 .body-section-contact{ 
     color: #fff;
     display: flex;
@@ -79,9 +85,12 @@
     .last-name{
         padding-left: 0;
     }
-     
-    
+}
 
+@media (max-width : 700px) {
+    .body-Topsection-contact{
+        margin-top: 200px;
+    }
 }
 
 @media (min-width : 301px) and (max-width : 400px) {
