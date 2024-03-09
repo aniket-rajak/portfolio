@@ -8,14 +8,24 @@ import { ActivatedRoute, NavigationExtras, Router ,RouterLink, RouterLinkActive,
 import { Subscription } from 'rxjs';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDrawer, MatSidenavModule } from '@angular/material/sidenav';
-import { HamburgerComponent } from '../hamburger/hamburger.component';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [MatButtonModule,MatIconModule,MatToolbarModule,MatDialogModule,RouterLink,RouterLinkActive,RouterOutlet,RouterModule,MatMenuModule,MatSidenavModule,HamburgerComponent],
+  imports: [MatButtonModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatDialogModule,
+    RouterLink,
+    RouterLinkActive,
+    RouterOutlet,
+    RouterModule,
+    MatMenuModule,
+    MatSidenavModule,
+  ],
+
   templateUrl: './about.component.html',
-  styleUrl: './about.component.css'
+  styleUrl: './about.component.css',
 })
 export class AboutComponent  implements OnInit {
 

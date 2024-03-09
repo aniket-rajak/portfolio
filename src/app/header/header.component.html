@@ -1,1 +1,36 @@
-<!-- <button (click)="m.toggle($event)">|||</button> -->
+<mat-toolbar >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <section class="top-nav">
+      <div class="logo">
+        <img src="./../assets/image/angular-logo.png" alt="logo" class="logo-image" >
+    </div>
+      <input id="menu-toggle" type="checkbox" />
+      <label class='menu-button-container' for="menu-toggle">
+      <div class='menu-button'></div>
+      </label>
+      <ul class="menu">
+        <li routerLink="/home" class="btn">Home</li>
+        <li routerLink="/about" class="btn">About</li>
+        <li routerLink="/contact" class="btn">Contact</li>
+        <li routerLink="/certificate" class="btn">Certificate</li>
+        <li routerLink="/projects" class="btn">Projects</li>
+      </ul>
+    </section>
+  </mat-toolbar>
+
+
+  <!-- <button mat-button routerLink="/home" class="btn" >Home</button>
+          <button mat-button routerLink="/about" class="btn" >About</button>
+          <button mat-button routerLink="/contact" class="btn" >Contact</button>
+          <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" style="margin: auto; " class="btn">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+            <mat-menu #menu="matMenu" >
+              <div style="background-color: #191414; height: 200px;">
+                <button mat-menu-item routerLink="/skills" class="btn" >Skills</button>
+                <button mat-menu-item routerLink="/certificate" class="btn" >Certificate</button>
+                <button mat-menu-item routerLink="/projects" class="btn" >Projects</button>
+              </div>
+            </mat-menu> -->
+
+  <router-outlet></router-outlet>

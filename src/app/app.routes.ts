@@ -5,7 +5,6 @@ import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
 import { CertificateComponent } from './certificate/certificate.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { HamburgerComponent } from './hamburger/hamburger.component';
 
 export const routes: Routes = [
     {path : '' , redirectTo : 'home' , pathMatch : 'full'},

@@ -11,37 +11,31 @@ import { MatMenuModule } from '@angular/material/menu';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,MatButtonModule,MatToolbarModule,MatIconModule, RouterLink, RouterLinkActive,RouterModule,MatSidenavModule,MatMenuModule],
+  imports: [
+    CommonModule, 
+    RouterOutlet,
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule, 
+    RouterLink, 
+    RouterLinkActive,
+    RouterModule,
+    RouterOutlet,
+    MatSidenavModule,
+    MatMenuModule],
+
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
   animations: [slideInAnimation ],
 })
 export class HeaderComponent implements OnInit {
- 
-
-  
-  // isSticky;
-
-  // @HostListener('class.open') menuOpen = false;
-  // constructor (){}
-
   ngOnInit(): void {
    
   }
 
   
 
-  prepareRoute(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
-  }
-  title = 'add-project';
-  showFiller = false;
-
-  menuOpen = false;
-
   
-  toggleMenu() {
-    this.menuOpen = !this.menuOpen;
-  }
+ 
  
 }

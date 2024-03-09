@@ -1,98 +1,160 @@
+/* @import url(https://fonts.googleapis.com/css?family=Raleway); */
+h2 {
+  vertical-align: center;
+  text-align: center;
+}
 
+html, body {
+  margin: 0;
+  height: 100%;
+}
 
-.header-section{
-    background-color: #191414;
-    color: white;
-    position: fixed;
-    top: 0px;
-  }
-  
-  .btn-section{
-      /* border: 1px solid green; */
-      width: 100%;
-      text-align: end;
-      color: white;
-  }
-  
-  .btn{
-    color: #ffff !important;
-  }
-  
-  .btn:hover{
-    color: red !important;
-  }
-  
-  /* .menu-container {
-    display: none;
-  }
-  
-  .menu-container.open {
-    display: block;
-  }
-  
-  .hamburger{
-    text-align: center;
-  }
-  
-  .hamburger-btn{
-    display: none;
-  } */
-  
-  .logo-image{
-    height: 50px; 
-    width: 50px;
-  }
-  
-  .example-container {
-     
-      border: 1px solid rgba(0, 0, 0, 0.5);
-    }
-    
-    .example-sidenav-content {
-      display: flex;
-      height: 100%;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .example-sidenav {
-      padding: 20px;
-    }
-  
-    
-  .material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
-  }
-  
-  .second-btn-section{
+/* * {
+  font-family: "Raleway";
+  box-sizing: border-box;
+} */
+
+::ng-deep .mat-toolbar-row, .mat-toolbar-single-row{
+  padding: 0;
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #191414;
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #FFF;
+  height: 100%;
+  width: 100%;
+  /* height: 50px; */
+  padding: 1em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+}
+
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) {
+  .menu-button-container {
     display: flex;
   }
-  
-    @media ( max-width : 600px){
-      .logo-image{
-        height: 40px ; 
-        width: 40px ;
-      }
-      /* .btn-section{
-        display: none;
-    }
-      .hamburger-btn{
-        display: block;
-        margin-left: 420px;
-      }
-      .hamburger{
-        text-align: end !important;
-      } */
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
-  
-  @media ( max-width : 400px){
-  
-    /* .btn-section{
-      display: none;
-    } */
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
-  
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}
+
+.logo-image{
+  height: 50px; 
+  width: 50px;
+}
+
+.btn{
+  color: #ffff !important;
+}
+
+.btn:hover{
+  color: red !important;
+}
+
+@media ( max-width : 700px){
+  .logo-image{
+    height: 40px ; 
+    width: 40px ;
+  }
+}

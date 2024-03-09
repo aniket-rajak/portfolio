@@ -1,87 +1,94 @@
- <!-- <div style="width: 100%; height: 50px;"></div>
-<div  style="text-align: center;">
-<span class="check">Check Your Location</span>
-</div><br>
-<div class="location" style="width: 100%; display: flex; justify-content: center; border-radius: 10px; object-fit: contain;">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30765978.00238801!2d61.000836982563946!3d19.729113061269327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1707149204925!5m2!1sen!2sin" width="1000" height="600" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
-</div>  -->
 
 <div  class="body-Topsection-contact">
     <div class="body-section-contact">
-        <div class="contact">
-            <span class="contact-me">Contact Me</span>
-            <div style="width: 100px; border: 2px solid red; margin-top: 10px;"></div><br>
-            <span class="material-symbols-outlined" style="color: red;">
-                call
-            </span>
-            <span style=" color: red; margin-left: 10px;" class="contact-area">Phone :&nbsp;</span><span class="contact-area">+91 62912 &nbsp; 50328</span><br>
-            <span class="material-symbols-outlined" style="color: red;">
-                mail
-            </span>
-            <span style="color: red; margin-left: 10px;" class="contact-area">Email  :&nbsp;</span><span class="contact-area"> aniketrajak030303&#64;gmail.com</span><br>
+        <div class="container contact">
+            <div class="row">
+              <div class="col-1 icon"><mat-icon>call</mat-icon>
+              </div>
+              <div class="col-2 text_font">call </div>
+              <div class="col-9 text_font2">: +91 62912 &nbsp; 50328</div>
+            </div>
+            <div class="row" style="margin-top: 10px;">
+              <div class="col-1 icon"><mat-icon>mail</mat-icon>
+              </div>
+              <div class="col-2 text_font">Mail </div>
+              <div class="col-9 text_font2">: aniketrajak030303&#64;gmail.com</div>
+            </div>
+            <br><br>
+            <div class="row" style="margin-top: 10px;">
+              <div class="col-12">
+                <a mat-raised-button color="warn" href="./../../assets/pdf/resume ani 0.1.pdf" download="Download CV" style="width: 150px;">Resume</a>
+              </div>
+            </div>
             
-            <img src="./../../assets/image/Linkdin.png" alt="logo" style="color: red; margin-left: -6px; margin-top: 5px;" >
-            <span style="color: red; margin-left: 10px;" class="contact-area">Linkdin :</span>
-            <span class="contact-area">linkedin.com/in/aniket-rajak-292a46187</span>
-            <br><br><br>
-
-            <a mat-raised-button color="warn" href="./../../assets/pdf/resume ani 0.1.pdf" download="Download CV" style="width: 150px;">Resume</a>
             
         </div>
     
-        <div class="contact-form-section" style="padding: 30px;">
-
-            <form class="example-form">
-
-            <table class="example-full-width" id="table" cellspacing="0">
+        <div class="container contact-form-section" style="padding: 30px;" >
+            <form class="example-form" [formGroup]="form" action="javascript:void(0)" (submit)="send()">
+              <div class="row">
+                <div class="col-12 w-100">
+                  <mat-form-field class="example-full-width"  id="subject-form">
+                    <mat-label>Full Name</mat-label>
+                    <input matInput formControlName="from_name">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 w-100">
+                  <mat-form-field class="example-full-width" id="email-form">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="from_email">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 w-100">
+                  <mat-form-field class="example-full-width"  id="subject-form">
+                    <mat-label>Subject</mat-label>
+                    <input matInput formControlName="subject">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 w-100">
+                  <mat-form-field class="example-full-width" id="content-form">
+                    <mat-label>Your message...</mat-label>
+                    <textarea matInput formControlName="message"></textarea>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 w-100">
+                  <button mat-raised-button color="warn" type="submit" >Submit</button>
+                </div>
+              </div>
+           
                 
-                   <div class="table-data-name-form">
-                       <div class="first-name">
-                            <mat-form-field class="example-full-width">
-                            <mat-label>First name</mat-label>
-                            <input matInput ng-required="myVar">
-                            <!-- <mat-hint>First Name!</mat-hint> -->
-                            </mat-form-field>
-                       </div>
-                   
-                        <div class="last-name">
-                            <mat-form-field class="example-full-width">
-                            <mat-label>Last Name</mat-label>
-                            <input matInput required="required" >
-                            <!-- <mat-hint>Last Name!</mat-hint> -->
-                            </mat-form-field>
-                        </div>
-                   </div>
-                
-            </table>
-
-            
-                <mat-form-field class="example-full-width">
-                  <mat-label>Email</mat-label>
-                  <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
-                         placeholder="Ex. pat@example.com">
-                  <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
-                  @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
-                    <mat-error>Please enter a valid email address</mat-error>
-                  }
-                  @if (emailFormControl.hasError('required')) {
-                    <mat-error>Email is <strong>required</strong></mat-error>
-                  }
+                <!-- <mat-form-field class="example-full-width"  id="subject-form">
+                  <mat-label>Full Name</mat-label>
+                  <input matInput formControlName="from_name">
                 </mat-form-field>
-              
 
-              <mat-form-field class="example-full-width">
+                <mat-form-field class="example-full-width" id="email-form">
+                  <mat-label>Email</mat-label>
+                  <input type="email" matInput 
+                         placeholder="Ex. pat@example.com" formControlName="from_email">
+                </mat-form-field>
+
+                
+                
+                <mat-form-field class="example-full-width"  id="subject-form">
+                  <mat-label>Subject</mat-label>
+                  <input matInput formControlName="subject">
+                </mat-form-field>
+              <mat-form-field class="example-full-width" id="content-form">
                 <mat-label>Your message...</mat-label>
-                <textarea matInput></textarea>
-                <!-- <mat-hint>Message!</mat-hint> -->
+                <textarea matInput formControlName="message"></textarea>
               </mat-form-field>
+              <button mat-raised-button color="warn" type="submit" >Submit</button> -->
 
-              <button mat-raised-button color="warn">Submit</button>
-
-              
             </form>  
-            
-            
         </div>
     </div>
 </div>

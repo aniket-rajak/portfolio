@@ -18,12 +18,9 @@ export const slideInAnimation =
       query(':leave', animateChild(), { optional: true }),
       group([
         query(':leave', [
-            // animate('500ms', style({ opacity: 0 })),
             animate('600ms ease-out', style({ left: '100%' }))
         ], { optional: true }),
         query(':enter', [
-            // style({ opacity: 0 }),
-            // animate('300ms', style({ opacity: 1 })),
             animate('300ms ease-out', style({ left: '0%' }))
         ], { optional: true })
       ]),
@@ -32,9 +29,3 @@ export const slideInAnimation =
   ]);
 
 
-  // export const blinkAnimation = trigger('blinkAnimation', [
-  //   transition('* <=> *', [
-  //     animate('500ms', style({ opacity: 0 })),
-  //     animate('500ms', style({ opacity: 1 }))
-  //   ])
-  // ]);

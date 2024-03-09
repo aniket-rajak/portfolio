@@ -3,12 +3,11 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatInputModule} from '@angular/material/input';
-import { HamburgerComponent } from '../hamburger/hamburger.component';
 
 @Component({
   selector: 'app-certificate',
   standalone: true,
-  imports: [MatStepperModule,MatButtonModule,ReactiveFormsModule,MatInputModule,MatInputModule,HamburgerComponent],
+  imports: [MatStepperModule,MatButtonModule,ReactiveFormsModule,MatInputModule,MatInputModule,],
   templateUrl: './certificate.component.html',
   styleUrl: './certificate.component.css'
 })

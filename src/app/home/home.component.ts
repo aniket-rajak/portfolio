@@ -6,16 +6,17 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { MatDrawer, MatSidenavModule} from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import { HamburgerComponent } from '../hamburger/hamburger.component';
+import { slideInAnimation } from '../routing-animation';
 
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MatButtonModule,RouterLink, RouterLinkActive, RouterOutlet , RouterModule,MatTabsModule,MatSidenavModule,MatIconModule,MatIconButton,MatButtonModule,MatMenuModule,HamburgerComponent],
+  imports: [MatButtonModule,RouterLink, RouterLinkActive, RouterOutlet , RouterModule,MatTabsModule,MatSidenavModule,MatIconModule,MatIconButton,MatButtonModule,MatMenuModule,],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
+  animations: [slideInAnimation , ],
 })
 export class HomeComponent implements OnInit  {
   

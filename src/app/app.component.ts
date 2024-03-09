@@ -5,19 +5,32 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import { slideInAnimation } from './routing-animation';
 import {MatMenuModule} from '@angular/material/menu';
 import { HeaderComponent } from './header/header.component';
 import { PreloaderComponent } from './preloader/preloader.component';
+import{slideInAnimation} from './routing-animation'
 import { MatSidenav } from '@angular/material/sidenav';
-import { HamburgerComponent } from './hamburger/hamburger.component';
 // import { blinkAnimation} from './routing-animation';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, RouterOutlet,MatButtonModule,MatToolbarModule,MatIconModule, RouterLink, RouterLinkActive,RouterModule,MatSidenavModule,MatMenuModule,PreloaderComponent,HamburgerComponent],
+  imports: [
+    CommonModule, 
+    HeaderComponent, 
+    RouterOutlet,
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule, 
+    RouterLink, 
+    RouterLinkActive,
+    RouterModule,
+    MatSidenavModule,
+    MatMenuModule,
+    PreloaderComponent,
+    ],
+    
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   animations: [slideInAnimation , ],

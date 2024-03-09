@@ -1,69 +1,26 @@
-<div class="body-Topcertificate-section">
-   
-<!-- <app-hamburger></app-hamburger> -->
-
-    <h1 class="text1">Certificate</h1>
-      <mat-stepper [linear]="isLinear" #stepper style="background-color: #191414; ">
-        <mat-step [stepControl]="firstFormGroup" color="warn">
-            <div class="certificate-section">
-                <form [formGroup]="firstFormGroup">
-                    <h2 style="color: #fff;" class="text2">Intermediate</h2>
-                    <img src="./../../assets/image/Intermediate-certificate.jpeg" alt="image" class="img"><br><br>
-                    <div>
-                      <button mat-raised-button color="warn" matStepperNext>
-                        <div style="display: flex; text-align: center; padding-top: 5px;">
-                            <div><span>Next</span></div>
-                            <div><span class="material-symbols-outlined">chevron_right</span></div>
-                        </div>
-                      </button>
-                    </div>
-                  </form>
-            </div>
-        </mat-step>
-        <mat-step [stepControl]="secondFormGroup"  color="warn">
-          <div class="certificate-section">
-            <form [formGroup]="secondFormGroup">
-                <h2 style="color: #fff;"  class="text2">Diploma</h2>
-                <img src="./../../assets/image/Diploma-Certificate.jpeg" alt="image" class="img"><br><br>
-                <div>
-                  <button  mat-raised-button color="warn" matStepperPrevious >
-                   <div style="display: flex; text-align: center; padding-top: 5px;">
-                        <div><span class="material-symbols-outlined">chevron_left </span></div>
-                        <div><span>Back</span></div>
-                   </div>
-                  </button>
-                  <button  mat-raised-button color="warn" matStepperNext style="margin-left: 10px;">
-                    <div style="display: flex; text-align: center; padding-top: 5px;">
-                        <div><span>Next</span></div>
-                        <div><span class="material-symbols-outlined">chevron_right</span></div>
-                    </div>
-                  </button>
-                </div>
-              </form>
-          </div>
-        </mat-step>
-        <mat-step color="warn">
-            <div class="certificate-section">
-                <h2 style="color: #fff;"  class="text2">B-Tech</h2>
-                <h2 style="color: red;"  class="text2">Pursuing</h2><br>
-                <div>
-                  <button mat-raised-button color="warn" matStepperPrevious>
-                    <div style="display: flex; text-align: center; padding-top: 5px;">
-                        <div><span class="material-symbols-outlined">chevron_left </span></div>
-                        <div><span>Back</span></div>
-                   </div>
-                  </button>
-                  <button  mat-raised-button color="warn" (click)="stepper.reset()" style="margin-left: 10px;">
-                    <div style="display: flex; text-align: center; padding-top: 5px;">
-                        <div><span>Reset</span></div>
-                        <div><span class="material-symbols-outlined" style="margin-left: 3px;"> restart_alt </span></div>
-                   </div>
-                </button>
-                </div>
-            </div>
-        </mat-step>
-      </mat-stepper>
-
-      <h1 style="color: red; padding-left: 20px;">Tech-Certificate</h1>
-      
-</div>
+  <div style=" width: 70vw; margin: auto;" class="row body-Topcertificate-section" >
+    <div class="col-12">
+      <h1 class="text1">Certificate</h1>
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="../../assets/image/Intermediate-certificate.jpeg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="./../../assets/image/Diploma-Certificate.jpeg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./../../assets/image/Intermediate-certificate.jpeg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    </div>
+  </div>
