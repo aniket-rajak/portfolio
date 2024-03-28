@@ -20,11 +20,13 @@
 
 #icon1{
   font-size: 30px;
+  cursor: pointer;
 }
 
 #icons{
   font-size: 30px;
   margin-left: 20px;
+  cursor: pointer;
 }
 
 .fix-box{
@@ -41,6 +43,8 @@
     font-size: 100px;
     filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
  }
+
+
 
 ul{
     list-style: 10px;
@@ -61,11 +65,54 @@ ul li{
     animation: move 6s steps(500) infinite;
 
 }
+
+.head_text{
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 50px;
+  filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
+  margin-bottom: 20px;
+}
+
+/* cardshoversection */
+.cards{
+  position: relative;
+  overflow: hidden;
+}
+
+.cards>img{
+  height: 100%;
+  width: 100%;
+  transition: all 5s ease;
+}
+
+.content{
+  position: absolute;
+  left: 10px;
+  bottom: -100px;
+  color: red;
+ width: 100%;
+  
+}
+
+.cards:hover .content{
+  bottom: 10px;
+}
+
+a{
+  text-decoration: none;
+}
 @keyframes move {
     100%{
       top: -2470px;
     }
   }
+
+@media screen and (min-width:1031px) and (max-width:1076px) {
+  .fix-text{
+    font-size: 86px !important;
+  }
+}
 @media screen and (max-width:1030px) {
   ul{
     margin-top: 100px;
@@ -74,6 +121,16 @@ ul li{
   .fix-box{
     flex-direction: column;
   }
+  
+}
+@media screen and (min-width : 701px) and (max-width : 1029px) {
+  .head_text{
+    margin-top: 100px;
+  }
+  .fix-box{
+    flex-direction: column;
+    margin-top: 50px;
+}
 }
 @media screen and (max-width :700px) {
   .body-certificate-section{
@@ -83,24 +140,25 @@ ul li{
       margin-top: 40px;
       width: 400px;
       padding: 0;
+      margin-left: 35px;
   }
   .fix-box{
       flex-direction: column;
       margin-top: 50px;
   }
   .fix-text{
-      font-size: 50px;
+      font-size: 70px;
       filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
     }
     .icons-section{ 
       margin-top: 50px;
     }
     #icon1{
-      font-size: 22px;
+      font-size: 30px;
     }
     
     #icons{
-      font-size: 22px;
+      font-size: 30px;
       margin-left: 10px;
     }
 }  
@@ -118,10 +176,10 @@ ul li{
     margin-top: 100px;
   }
   #icon1{
-    font-size: 50px;
+    font-size: 30px;
   }
   #icons{
-    font-size: 50px;
+    font-size: 30px;
   }
 }
 @media screen and (max-width:400px) {
@@ -130,6 +188,12 @@ ul li{
   }
   ul{
     width: 300px;
+  }
+}
+
+@media screen and (min-width:301px) and (max-width:306px) {
+  .fix-text{
+    font-size: px;
   }
 }
 

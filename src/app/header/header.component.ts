@@ -8,6 +8,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { slideInAnimation } from './../routing-animation';
 import { MatMenuModule } from '@angular/material/menu';
 
+
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -33,6 +34,17 @@ export class HeaderComponent implements OnInit {
    
   }
 
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+  }
+  title = 'add-project';
+  showFiller = false;
+
+  menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
   
 
   

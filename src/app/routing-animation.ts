@@ -21,7 +21,7 @@ export const slideInAnimation =
             animate('600ms ease-out', style({ left: '100%' }))
         ], { optional: true }),
         query(':enter', [
-            animate('300ms ease-out', style({ left: '0%' }))
+            animate('700ms ease-out', style({ left: '0%' }))
         ], { optional: true })
       ]),
       query(':enter', animateChild(), { optional: true }),
